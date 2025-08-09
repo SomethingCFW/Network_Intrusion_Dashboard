@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Intrusion Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px; border: 1px solid #ddd; }
+        th { background: #333; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Network Intrusion Dashboard</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Source IP</th>
+            <th>Destination IP</th>
+            <th>Protocol</th>
+            <th>Alert</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+            <td>{{ log[2] }}</td>
+            <td>{{ log[3] }}</td>
+            <td>{{ log[4] }}</td>
+            <td>{{ log[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
